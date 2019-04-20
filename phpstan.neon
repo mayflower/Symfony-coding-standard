@@ -1,0 +1,5 @@
+parameters:
+    autoload_files:
+        - %rootDir%/../../../tests_bootstrap.php
+includes:
+	- vendor/phpstan/phpstan-strict-rules/rules.neon
