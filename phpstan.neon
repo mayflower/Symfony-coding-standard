@@ -1,0 +1,9 @@
+includes:
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
+parameters:
+    level: 6
+    checkMissingIterableValueType: false
+    bootstrapFiles:
+        - %rootDir%/../../../tests_bootstrap.php
+    paths:
+        - %rootDir%/../../../Symfony/Sniffs
