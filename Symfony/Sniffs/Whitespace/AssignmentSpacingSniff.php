@@ -66,9 +66,9 @@ class AssignmentSpacingSniff implements Sniff
     {
         $tokens = $phpcsFile->getTokens();
 
-        if (($tokens[$stackPtr - 1]['code'] !== T_WHITESPACE
+        if ($tokens[$stackPtr - 1]['content'] !== 'strict_types'
+            && ($tokens[$stackPtr - 1]['code'] !== T_WHITESPACE
             || $tokens[$stackPtr + 1]['code'] !== T_WHITESPACE)
-            && $tokens[$stackPtr - 1]['content'] !== 'strict_types'
         ) {
             $fix = $phpcsFile->addFixableError(
                 'Add a single space around assignment operators',

@@ -138,7 +138,7 @@ class ValidClassNameSniff implements Sniff
                 $function = $phpcsFile->findNext(T_FUNCTION, $stackPtr);
 
                 // making sure we're not dealing with an abstract function
-                if ((null === $function|| $name < $function)
+                if ($name < $function
                     && strpos($tokens[$name]['content'], 'Abstract') !== 0
                 ) {
                     $phpcsFile->addError(

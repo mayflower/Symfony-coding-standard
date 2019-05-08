@@ -104,6 +104,8 @@ class TypeHintingSniff implements Sniff
                     $tag['content']
                 )
             );
+        } else {
+            $hint = null;
         }
 
         if (isset($hint, self::$_blacklist[$hint])) {
