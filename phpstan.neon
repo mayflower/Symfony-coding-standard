@@ -1,5 +1,8 @@
 parameters:
+    checkMissingIterableValueType: false
     autoload_files:
         - %rootDir%/../../../tests_bootstrap.php
+    paths:
+       - %rootDir%/../../../Symfony
 includes:
-	- vendor/phpstan/phpstan-strict-rules/rules.neon
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
